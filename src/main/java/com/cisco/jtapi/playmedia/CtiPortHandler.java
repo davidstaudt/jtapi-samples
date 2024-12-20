@@ -27,14 +27,17 @@ import com.cisco.jtapi.extensions.*;
 
 import com.cisco.cti.util.Condition;
 
-public class CtiPortHandler implements TerminalObserver, ProviderObserver, AddressObserver, CallControlCallObserver {
+public class CtiPortHandler implements 
+    ProviderObserver,
+    AddressObserver,
+    TerminalObserver,
+    CallControlCallObserver {
 
+    public Condition providerInService = new Condition();
     public Condition ctipAddressInService = new Condition();
     public Condition ctipTerminalInService = new Condition();
     public Condition ctipCallRinging = new Condition();
     public Condition ctipCallTalking = new Condition();
-    public Condition ctipTransferCompleted = new Condition();
-    public Condition providerInService = new Condition();
     public Condition ctipRTPOutputStarted = new Condition();
 
 
@@ -83,9 +86,6 @@ public class CtiPortHandler implements TerminalObserver, ProviderObserver, Addre
                     break;
                 case CallCtlTermConnTalkingEv.ID:
                     ctipCallTalking.set();
-                    break;
-                case CiscoTransferEndEv.ID:
-                    ctipTransferCompleted.set();
                     break;
             }
         }

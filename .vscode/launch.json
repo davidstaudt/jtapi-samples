@@ -52,6 +52,13 @@
             "request": "launch",
             "mainClass": "com.cisco.jtapi.conference.conference",
             "projectName": "jtapi-samples"
+        },
+        {
+            "type": "java",
+            "name": "Launch agentgreeting",
+            "request": "launch",
+            "mainClass": "com.cisco.jtapi.agentgreeting.agentGreeting",
+            "projectName": "jtapi-samples"
         }
     ]
 }

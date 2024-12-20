@@ -24,7 +24,7 @@ package com.cisco.jtapi.playmedia;
 //   * Any other phone to make the call to the CTI Port
 
 // Scenario:
-// 1. A call is placed to the CTI Port
+// 1. A call is (manually) placed to the CTI Port from any phone
 // 2. The CTI Port answers the call
 // 3. The GStreamer framework is used to stream an audio file to the dynamic IP/port of the caller
 // 3. CTI_PORT_DN drops the call

@@ -20,9 +20,11 @@ Visit the [DevNet JTAPI Site](https://developer.cisco.com/site/jtapi)
 
 - `playmedia` - Answer an inbound call on a CTI Port, then play an audio file using the [gstreamer-java](https://github.com/gstreamer-java/gst1-java-core) framework (see [GStreamer Downloads](https://gstreamer.freedesktop.org/download/) to install - present by default in Ubuntu Linux.)
 
+- `agentGreeting` - Answer an inbound call on a phone, then request an Agent Greeting IVR call to a CTI port.  The CTI port answers and  plays an audio file using gstreamer-java.
+
 ## Requirements
 
-- [OpenJDK 8](https://openjdk.java.net/)
+- [OpenJDK 8 or 11](https://openjdk.java.net/)
 
 - [Apache Maven](https://maven.apache.org/) 3.6.3
 
@@ -55,7 +57,7 @@ Visit the [DevNet JTAPI Site](https://developer.cisco.com/site/jtapi)
 
 ## Getting started
 
-1. Make sure you have OpenJDK 11 installed, `java` is available in the path, and `$JAVA_HOME` points to the right directory:
+1. Make sure you have OpenJDK 8/11 installed, `java` is available in the path, and `$JAVA_HOME` points to the right directory:
 
     ```bash
     $ java -version
